@@ -106,8 +106,6 @@ export default function ContactPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="w-full h-[400px] rounded-2xl bg-gradient-to-br from-gray-800 to-cgh-charcoal relative overflow-hidden flex flex-col items-center justify-center shadow-xl border border-gray-200">
-              <div className="absolute inset-0 bg-[url('/noise.png')] opacity-20 mix-blend-overlay"></div>
-              
               {/* Map grid simulation */}
               <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
               
