@@ -1,7 +1,6 @@
 import {
   Route,
   Droplets,
-  CircleDot,
   Mountain,
   Building2,
 } from "lucide-react";
@@ -39,39 +38,21 @@ export const services: Service[] = [
     ],
   },
   {
-    id: "drainage-works",
-    title: "Drainage Works",
-    shortTitle: "Drainage",
+    id: "drainage-culvert",
+    title: "Drainage & Culvert Works",
+    shortTitle: "Drainage & Culverts",
     description:
-      "Drainage improvement and water management infrastructure to protect road surfaces and surrounding areas from water damage.",
+      "Construction and improvement of drainage systems, culverts and associated water-management infrastructure to control runoff, maintain water flow and protect road corridors from water-related damage.",
     icon: Droplets,
     details: [
       "Side drain construction",
       "Stone pitching of drainage channels",
       "Mitre drains and turnouts",
-      "Drainage improvement works",
-      "Water management infrastructure",
+      "Culvert and cross-drainage structure works",
+      "Headwalls and water-flow structures",
     ],
     relatedProjectSlugs: [
       "myanzi-kassanda-bukuya-kiboga",
-      "mpara-kazinga-bwizi-kahunge-bisozi",
-    ],
-  },
-  {
-    id: "culvert-installation",
-    title: "Culvert Installation",
-    shortTitle: "Culverts",
-    description:
-      "Installation and replacement of culverts to maintain water flow across road corridors and prevent structural damage to road infrastructure.",
-    icon: CircleDot,
-    details: [
-      "Culvert installation",
-      "Culvert replacement",
-      "Cross-drainage structures",
-      "Headwall construction",
-      "Pipe culvert works",
-    ],
-    relatedProjectSlugs: [
       "mpara-kazinga-bwizi-kahunge-bisozi",
       "kyegegwa-hapuuya-kibaale",
     ],

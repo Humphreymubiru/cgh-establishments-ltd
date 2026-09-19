@@ -7,8 +7,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 import { services } from "@/data/services";
 
 export default function ServiceGrid() {
-  // Taking the first 5 services or all if less than 5
-  const displayServices = services.slice(0, 5);
+  const displayServices = services;
 
   return (
     <section className="py-16 md:py-20 bg-white relative">
@@ -35,9 +34,14 @@ export default function ServiceGrid() {
                     <Icon size={28} strokeWidth={1.5} />
                   </div>
                   
-                  <h3 className="text-lg font-display font-bold text-cgh-charcoal mb-3 group-hover:text-cgh-red transition-colors">
-                    {service.title}
-                  </h3>
+                  <div className="mb-3 flex items-start justify-between gap-4">
+                    <h3 className="text-lg font-display font-bold text-cgh-charcoal group-hover:text-cgh-red transition-colors">
+                      {service.title}
+                    </h3>
+                    <span className="shrink-0 font-display text-xs font-bold tracking-[0.16em] text-cgh-red">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                  </div>
                   
                   <p className="text-sm leading-7 text-cgh-muted font-body mb-8 flex-grow">
                     {service.description}

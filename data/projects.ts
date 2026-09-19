@@ -87,12 +87,12 @@ export const projects: Project[] = [
     commencement: "27 March 2019",
     completion: "26 November 2019",
     scope:
-      "Site clearance, grading, gravelling, culvert installation, stone pitching of side drains",
+      "Site clearance, grading, gravelling, culvert and water-management works",
     scopeActivities: [
       "Site clearance and preparation",
       "Road grading and formation",
       "Gravelling and surface preparation",
-      "Culvert installation and replacement",
+      "Culvert and drainage structure works",
       "Stone pitching of side drains",
       "Drainage improvement works",
     ],
@@ -102,12 +102,12 @@ export const projects: Project[] = [
       "Maintaining a combined 106 km road network across two national road corridors",
     heroImage: "/images/projects/culvert-work.jpg",
     description:
-      "Mechanised maintenance of two national road corridors — Mpara–Kazinga–Bwizi (38 km) and Kahunge–Bisozi–Bwizi–Kihura (68 km) — combining to 106 km of road works including grading, gravelling, culvert installation and drainage improvement in western Uganda. Government monitoring recorded 99% cumulative physical progress.",
+      "Mechanised maintenance of two national road corridors — Mpara–Kazinga–Bwizi (38 km) and Kahunge–Bisozi–Bwizi–Kihura (68 km) — combining to 106 km of road works including grading, gravelling, culvert and drainage improvement works in western Uganda. Government monitoring recorded 99% cumulative physical progress.",
     technicalSpecs: {
       terrain: "Hilly to mountainous terrain, western Ugandan escarpment zone with steep gradients",
       soilType: "Laterite and clay-rich residual soils; some sections with expansive black cotton soil requiring treatment",
       designStandard: "UNRA Maintenance Standards; MoWT Road Design Manual; culvert design to UNRA Drainage Manual",
-      drainageApproach: "Stone-pitched side drains for erosion resistance on steep gradients, new pipe culvert installations (600–900 mm Ø), headwall and wingwall construction, mitre drains",
+      drainageApproach: "Stone-pitched side drains for erosion resistance on steep gradients, new pipe culvert works (600–900 mm Ø), headwall and wingwall construction, mitre drains",
       materialSpecs: "Gravel from approved borrow pits; stone pitching from local quarry sources; precast concrete pipe culverts to UNBS standards",
       cbrSubgrade: "CBR ≥ 15% (soaked) for subgrade; problem soil sections treated with selected fill",
       cbrGravel: "CBR ≥ 30% (soaked) for wearing course gravel",
@@ -131,12 +131,12 @@ export const projects: Project[] = [
     commencement: "4 June 2019",
     completion: "20 January 2020",
     scope:
-      "Site clearance, grading, gravelling, culvert installation, drainage improvement",
+      "Site clearance, grading, gravelling, culvert and drainage improvement works",
     scopeActivities: [
       "Site clearance and bush clearing",
       "Road grading and levelling",
       "Gravelling of road surface",
-      "Culvert installation",
+      "Culvert and drainage structure works",
       "Drainage improvement and water management",
     ],
     monitoringNote:
@@ -144,7 +144,7 @@ export const projects: Project[] = [
     websitePositioning: "Maintaining a 37 km national road corridor",
     heroImage: "/images/projects/earthworks.jpg",
     description:
-      "Mechanised maintenance of the 37 km Kyegegwa–Hapuuya–Kibaale national road, involving site clearance, grading, gravelling, culvert installation and drainage improvement in western Uganda. Government monitoring recorded 97% cumulative physical progress.",
+      "Mechanised maintenance of the 37 km Kyegegwa–Hapuuya–Kibaale national road, involving site clearance, grading, gravelling, culvert and drainage improvement works in western Uganda. Government monitoring recorded 97% cumulative physical progress.",
     technicalSpecs: {
       terrain: "Undulating terrain transitioning from Kyegegwa plains to Kibaale hills",
       soilType: "Red laterite (murram) soils, generally well-draining with isolated sections of poor subgrade",

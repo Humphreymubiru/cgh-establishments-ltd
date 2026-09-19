@@ -11,8 +11,7 @@ const footerLinks = {
   ],
   services: [
     { href: "/services#road-construction", label: "Road Construction" },
-    { href: "/services#drainage-works", label: "Drainage Works" },
-    { href: "/services#culvert-installation", label: "Culvert Installation" },
+    { href: "/services#drainage-culvert", label: "Drainage & Culvert Works" },
     { href: "/services#earthworks", label: "Earthworks" },
     { href: "/services#bridge-civil", label: "Civil Infrastructure" },
   ],

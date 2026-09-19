@@ -47,7 +47,7 @@ export const equipmentCategories: EquipmentCategory[] = [
     image: "/images/equipment/roller.jpg",
     specs: [
       "Vibratory compaction of gravel layers",
-      "95% MDD achievement",
+      "Specified density compaction",
       "Subgrade compaction",
       "Multi-pass rolling operations",
       "Surface finishing",

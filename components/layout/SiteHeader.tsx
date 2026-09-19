@@ -255,8 +255,16 @@ export default function SiteHeader() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "tween", duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-cgh-charcoal lg:hidden"
+            className="fixed inset-0 z-[60] bg-cgh-charcoal lg:hidden"
           >
+            <button
+              type="button"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="absolute right-4 top-6 p-2 text-white transition-colors hover:text-cgh-yellow"
+              aria-label="Close menu"
+            >
+              <X className="h-6 w-6" />
+            </button>
             <div className="flex flex-col items-center justify-center h-full gap-8">
               {navLinks.map((link, i) => (
                 <motion.div

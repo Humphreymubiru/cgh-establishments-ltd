@@ -49,16 +49,18 @@ export default function ServicesPage() {
 
               const imageMap: Record<string, string> = {
                 'road-construction': '/images/projects/myanzi-road.jpg',
-                'drainage-works': '/images/projects/culvert-work.jpg',
-                'culvert-installation': '/images/projects/culvert-work.jpg',
+                'drainage-culvert': '/images/projects/culvert-work.jpg',
                 'earthworks': '/images/projects/earthworks.jpg',
                 'bridge-civil': '/images/process/completion.jpg',
               };
 
               return (
                 <ScrollReveal key={service.id}>
-                  <div className={`grid md:grid-cols-2 gap-12 lg:gap-20 items-center ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
+                  <div id={service.id} className={`grid md:grid-cols-2 gap-12 lg:gap-20 items-center ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
                     <div className={`${index % 2 !== 0 ? 'md:order-2' : ''}`}>
+                      <div className="mb-4 font-display text-sm font-bold tracking-[0.2em] text-cgh-red">
+                        {String(index + 1).padStart(2, '0')}
+                      </div>
                       <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-cgh-red/10 text-cgh-red mb-6">
                         <Icon className="w-8 h-8" />
                       </div>

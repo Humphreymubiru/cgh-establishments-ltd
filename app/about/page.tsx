@@ -7,6 +7,15 @@ import { projects } from '@/data/projects';
 import { ShieldCheck, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 
+const coreValues = [
+  ['01', 'Quality', 'We are committed to delivering work that meets required standards and performs reliably in the field.'],
+  ['02', 'Integrity', 'We conduct our work with honesty, accountability and professionalism.'],
+  ['03', 'Safety', 'We prioritize safe working practices for our people, communities and project environments.'],
+  ['04', 'Reliability', 'We approach every project with discipline, responsibility and commitment to delivery.'],
+  ['05', 'Teamwork', 'We work collaboratively with clients, partners, communities and our teams to achieve project objectives.'],
+  ['06', 'Responsibility', 'We recognize our responsibility to the communities, environment and infrastructure we work within.'],
+];
+
 export const metadata: Metadata = {
   title: 'About Us | CGH Establishments Ltd',
   description: 'CGH Establishments Ltd is a Ugandan construction company operating in the road and civil infrastructure sector.',
@@ -78,7 +87,7 @@ export default function AboutPage() {
                   <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-sm border border-gray-200">
                     <Image
                       src="/images/projects/culvert-work.jpg"
-                      alt="Culvert installation and drainage infrastructure"
+                      alt="Drainage infrastructure works"
                       fill
                       className="object-cover"
                       sizes="(max-width: 768px) 100vw, 25vw"
@@ -105,6 +114,56 @@ export default function AboutPage() {
                 </div>
               </div>
             </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Direction and proposed values */}
+      <section className="bg-cgh-light py-20 md:py-28">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <SectionHeading
+              label="Our Direction"
+              title="Vision, mission and working principles"
+              subtitle="Proposed website copy pending confirmation by CGH Establishments Ltd."
+            />
+          </ScrollReveal>
+
+          <div className="mt-12 grid gap-12 border-y border-gray-200 py-10 lg:grid-cols-2 lg:gap-20">
+            <ScrollReveal>
+              <div className="border-l-2 border-cgh-red pl-6">
+                <p className="font-display text-xs font-bold uppercase tracking-[0.22em] text-cgh-red">Vision</p>
+                <p className="mt-5 max-w-xl font-display text-2xl font-semibold leading-tight text-cgh-charcoal md:text-3xl">
+                  To be a trusted leader in road and civil infrastructure development, contributing to safer, more reliable and better-connected communities across Uganda.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.1}>
+              <div className="border-l-2 border-cgh-yellow pl-6">
+                <p className="font-display text-xs font-bold uppercase tracking-[0.22em] text-cgh-red">Mission</p>
+                <p className="mt-5 max-w-xl text-lg leading-8 text-cgh-muted">
+                  To deliver quality road and civil infrastructure works through competent people, effective project management and responsible use of equipment and resources.
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+
+          <div className="mt-14">
+            <p className="font-display text-xs font-bold uppercase tracking-[0.22em] text-cgh-red">Core Values</p>
+            <div className="mt-6 grid border-t border-gray-200 md:grid-cols-2 md:divide-x md:divide-gray-200">
+              {coreValues.map(([number, title, description], index) => (
+                <ScrollReveal key={number} delay={index * 0.05}>
+                  <div className="grid grid-cols-[48px_1fr] gap-5 border-b border-gray-200 py-6 md:px-6 first:md:pl-0">
+                    <span className="font-display text-sm font-bold tracking-[0.16em] text-cgh-red">{number}</span>
+                    <div>
+                      <h3 className="font-display text-xl font-bold text-cgh-charcoal">{title}</h3>
+                      <p className="mt-2 max-w-md text-sm leading-7 text-cgh-muted">{description}</p>
+                    </div>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
         </div>
       </section>
