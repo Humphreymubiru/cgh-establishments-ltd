@@ -89,10 +89,10 @@ export default function ServicesPage() {
                               <Link
                                 key={project.id}
                                 href={`/projects/${project.slug}`}
-                                className="group flex items-center justify-between p-4 bg-cgh-light rounded-lg hover:bg-gray-100 transition-colors"
+                                className="group flex items-center justify-between rounded-lg border border-gray-200 bg-cgh-light p-4 text-cgh-charcoal transition-colors hover:border-cgh-red hover:bg-cgh-red hover:text-white dark:border-white/10 dark:bg-slate-900 dark:text-slate-100 dark:hover:bg-cgh-red"
                               >
-                                <span className="font-semibold text-cgh-charcoal">{project.title}</span>
-                                <ArrowRight className="w-4 h-4 text-cgh-muted group-hover:text-cgh-red transition-colors" />
+                                <span className="font-semibold">{project.title}</span>
+                                <ArrowRight className="w-4 h-4 text-cgh-muted transition-colors group-hover:text-white" />
                               </Link>
                             ))}
                           </div>
