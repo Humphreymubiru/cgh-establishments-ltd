@@ -54,7 +54,12 @@ export default function EquipmentPage() {
         </div>
       </section>
 
-      <ContactCTA />
+      <ContactCTA
+        title="Need equipment for a project?"
+        subtitle="Send an equipment or machine-hire enquiry and the CGH team can review the requirement."
+        buttonText="REQUEST EQUIPMENT QUOTATION"
+        buttonHref="/contact?subject=machine-hire"
+      />
     </>
   );
 }

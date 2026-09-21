@@ -18,7 +18,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "CGH Establishments Ltd — Building the Infrastructure That Moves Uganda",
+    default: "CGH Establishments Ltd - Building the Infrastructure That Moves Uganda",
     template: "%s | CGH Establishments Ltd",
   },
   description:

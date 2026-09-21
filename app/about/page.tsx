@@ -207,7 +207,7 @@ export default function AboutPage() {
                           <span className="inline-flex items-center rounded-full bg-cgh-red/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-cgh-red">
                             {project.number}
                           </span>
-                          <span className="text-sm font-medium text-cgh-muted">{project.commencement} — {project.completion}</span>
+                          <span className="text-sm font-medium text-cgh-muted">{project.commencement} to {project.completion}</span>
                         </div>
 
                         <h3 className="mb-3 text-xl font-display font-bold text-cgh-charcoal md:text-2xl">

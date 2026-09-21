@@ -60,8 +60,8 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
       icon: Layers,
       items: [
         { label: "Material Specification", value: project.technicalSpecs.materialSpecs },
-        { label: "CBR — Subgrade", value: project.technicalSpecs.cbrSubgrade },
-        { label: "CBR — Gravel", value: project.technicalSpecs.cbrGravel },
+        { label: "CBR - Subgrade", value: project.technicalSpecs.cbrSubgrade },
+        { label: "CBR - Gravel", value: project.technicalSpecs.cbrGravel },
         { label: "Gravel Thickness", value: project.technicalSpecs.gravelThickness },
       ],
     },

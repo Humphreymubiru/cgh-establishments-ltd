@@ -298,7 +298,7 @@ export default function SiteHeader() {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="inline-flex items-center gap-3 bg-cgh-red text-white font-display font-semibold text-lg px-8 py-4 tracking-wider hover:bg-cgh-red-dark transition-colors"
                 >
-                  LET&apos;S WORK
+                  LET&apos;S BUILD
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </motion.div>

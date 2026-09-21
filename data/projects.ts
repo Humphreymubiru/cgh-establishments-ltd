@@ -1,3 +1,5 @@
+import { publishedStatus, type ContentStatus } from "@/lib/content";
+
 export interface TechnicalSpecs {
   terrain: string;
   soilType: string;
@@ -15,6 +17,7 @@ export interface TechnicalSpecs {
 
 export interface Project {
   id: string;
+  status: ContentStatus;
   number: string;
   title: string;
   slug: string;
@@ -34,9 +37,10 @@ export interface Project {
   technicalSpecs: TechnicalSpecs;
 }
 
-export const projects: Project[] = [
+const projectRecords: Project[] = [
   {
     id: "project-01",
+    status: publishedStatus,
     number: "01",
     title: "Myanzi–Kassanda–Bukuya–Kiboga Road",
     slug: "myanzi-kassanda-bukuya-kiboga",
@@ -76,6 +80,7 @@ export const projects: Project[] = [
   },
   {
     id: "project-02",
+    status: publishedStatus,
     number: "02",
     title: "Mpara–Kazinga–Bwizi & Kahunge–Bisozi–Bwizi–Kihura Roads",
     slug: "mpara-kazinga-bwizi-kahunge-bisozi",
@@ -120,6 +125,7 @@ export const projects: Project[] = [
   },
   {
     id: "project-03",
+    status: publishedStatus,
     number: "03",
     title: "Kyegegwa–Hapuuya–Kibaale Road",
     slug: "kyegegwa-hapuuya-kibaale",
@@ -161,6 +167,8 @@ export const projects: Project[] = [
     },
   },
 ];
+
+export const projects = projectRecords.filter((project) => project.status === "published");
 
 export function getProjectBySlug(slug: string): Project | undefined {
   return projects.find((p) => p.slug === slug);

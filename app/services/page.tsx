@@ -128,7 +128,12 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <ContactCTA />
+      <ContactCTA
+        title="Need a quotation for your project?"
+        subtitle="Share the scope, location and programme of your road or civil infrastructure requirement with the CGH team."
+        buttonText="REQUEST A QUOTATION"
+        buttonHref="/contact?subject=request-quotation"
+      />
     </>
   );
 }

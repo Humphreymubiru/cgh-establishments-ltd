@@ -1,5 +1,8 @@
+import { publishedStatus, type ContentStatus } from "@/lib/content";
+
 export interface EquipmentCategory {
   id: string;
+  status: ContentStatus;
   name: string;
   description: string;
   note: string;
@@ -7,9 +10,10 @@ export interface EquipmentCategory {
   specs: string[];
 }
 
-export const equipmentCategories: EquipmentCategory[] = [
+const equipmentRecords: EquipmentCategory[] = [
   {
     id: "excavators",
+    status: publishedStatus,
     name: "Excavators",
     description:
       "Heavy-duty hydraulic excavators for earthmoving, site clearance, drainage channel construction, culvert trench excavation and general excavation works on road projects.",
@@ -25,6 +29,7 @@ export const equipmentCategories: EquipmentCategory[] = [
   },
   {
     id: "graders",
+    status: publishedStatus,
     name: "Motor Graders",
     description:
       "Motor graders for road surface formation, precision levelling, grading operations, camber establishment and regular road maintenance activities across project corridors.",
@@ -40,6 +45,7 @@ export const equipmentCategories: EquipmentCategory[] = [
   },
   {
     id: "rollers",
+    status: publishedStatus,
     name: "Compaction Rollers",
     description:
       "Vibratory and static rollers for compaction of road subgrade, gravel wearing course layers and earthworks to achieve specified density requirements.",
@@ -55,6 +61,7 @@ export const equipmentCategories: EquipmentCategory[] = [
   },
   {
     id: "tipper-trucks",
+    status: publishedStatus,
     name: "Tipper Trucks",
     description:
       "Tipper trucks for transportation of gravel, murram, earth, and aggregate materials from approved borrow pits to project sites across road corridors.",
@@ -69,3 +76,5 @@ export const equipmentCategories: EquipmentCategory[] = [
     ],
   },
 ];
+
+export const equipmentCategories = equipmentRecords.filter((equipment) => equipment.status === "published");

@@ -3,6 +3,22 @@
 import React, { useState } from 'react';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
+const subjectMap: Record<string, string> = {
+  'request-quotation': 'Request a Quotation',
+  'machine-hire': 'Machine Hire',
+  'request a quotation': 'Request a Quotation',
+  'machine hire': 'Machine Hire',
+};
+
+function getInitialSubject() {
+  if (typeof window === 'undefined') {
+    return 'General Inquiry';
+  }
+
+  const subject = new URLSearchParams(window.location.search).get('subject')?.trim().toLowerCase();
+  return (subject && subjectMap[subject]) || 'General Inquiry';
+}
+
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -11,7 +27,10 @@ export function ContactForm() {
     email: '',
     phone: '',
     company: '',
-    subject: 'General Enquiry',
+    subject: getInitialSubject(),
+    equipment: '',
+    location: '',
+    duration: '',
     message: ''
   });
 
@@ -33,7 +52,10 @@ export function ContactForm() {
         email: '',
         phone: '',
         company: '',
-        subject: 'General Enquiry',
+        subject: 'General Inquiry',
+        equipment: '',
+        location: '',
+        duration: '',
         message: ''
       });
       
@@ -104,6 +126,47 @@ export function ContactForm() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-2">
+            <label htmlFor="equipment" className="text-sm font-medium text-gray-700">Equipment / Machine Required</label>
+            <input
+              type="text"
+              id="equipment"
+              name="equipment"
+              value={formData.equipment}
+              onChange={handleChange}
+              className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-cgh-red focus:ring-2 focus:ring-cgh-red/20 outline-none transition-all"
+              placeholder="For example, motor grader"
+            />
+          </div>
+
+          <div className="space-y-2">
+            <label htmlFor="location" className="text-sm font-medium text-gray-700">Project / Site Location</label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+              value={formData.location}
+              onChange={handleChange}
+              className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-cgh-red focus:ring-2 focus:ring-cgh-red/20 outline-none transition-all"
+              placeholder="District, town or project site"
+            />
+          </div>
+        </div>
+
+        <div className="space-y-2">
+          <label htmlFor="duration" className="text-sm font-medium text-gray-700">Required Duration</label>
+          <input
+            type="text"
+            id="duration"
+            name="duration"
+            value={formData.duration}
+            onChange={handleChange}
+            className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-cgh-red focus:ring-2 focus:ring-cgh-red/20 outline-none transition-all"
+            placeholder="For example, 2 weeks"
+          />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="space-y-2">
             <label htmlFor="phone" className="text-sm font-medium text-gray-700">Phone Number</label>
             <input 
               type="tel" 
@@ -139,16 +202,17 @@ export function ContactForm() {
             onChange={handleChange}
             className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-cgh-red focus:ring-2 focus:ring-cgh-red/20 outline-none transition-all appearance-none"
           >
-            <option>General Enquiry</option>
-            <option>Project Enquiry</option>
-            <option>Partnership</option>
-            <option>Supplier</option>
+            <option>General Inquiry</option>
+            <option>Request a Quotation</option>
+            <option>Machine Hire</option>
+            <option>Project / Tender Inquiry</option>
+            <option>Partnership / Subcontracting</option>
             <option>Other</option>
           </select>
         </div>
 
         <div className="space-y-2">
-          <label htmlFor="message" className="text-sm font-medium text-gray-700">Message *</label>
+          <label htmlFor="message" className="text-sm font-medium text-gray-700">Additional Requirements / Details *</label>
           <textarea 
             id="message"
             name="message"

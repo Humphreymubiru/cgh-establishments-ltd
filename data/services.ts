@@ -5,9 +5,11 @@ import {
   Building2,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { publishedStatus, type ContentStatus } from "@/lib/content";
 
 export interface Service {
   id: string;
+  status: ContentStatus;
   title: string;
   shortTitle: string;
   description: string;
@@ -16,9 +18,10 @@ export interface Service {
   relatedProjectSlugs: string[];
 }
 
-export const services: Service[] = [
+const serviceRecords: Service[] = [
   {
     id: "road-construction",
+    status: publishedStatus,
     title: "Road Construction & Maintenance",
     shortTitle: "Roads",
     description:
@@ -39,6 +42,7 @@ export const services: Service[] = [
   },
   {
     id: "drainage-culvert",
+    status: publishedStatus,
     title: "Drainage & Culvert Works",
     shortTitle: "Drainage & Culverts",
     description:
@@ -59,6 +63,7 @@ export const services: Service[] = [
   },
   {
     id: "earthworks",
+    status: publishedStatus,
     title: "Earthworks & Site Preparation",
     shortTitle: "Earthworks",
     description:
@@ -78,6 +83,7 @@ export const services: Service[] = [
   },
   {
     id: "bridge-civil",
+    status: publishedStatus,
     title: "Bridge & Civil Infrastructure",
     shortTitle: "Civil Works",
     description:
@@ -92,3 +98,5 @@ export const services: Service[] = [
     relatedProjectSlugs: [],
   },
 ];
+
+export const services = serviceRecords.filter((service) => service.status === "published");
